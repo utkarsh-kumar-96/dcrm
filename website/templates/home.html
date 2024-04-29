@@ -21,7 +21,7 @@
             {% if records %}
                 {% for rec in records %}
                     <tr>
-                        <td><a href="{% url 'record' record.id %}">{{ rec.id }}</a></td>
+                        <td><a href="{% url 'record' rec.id %}">{{ rec.id }}</a></td>
                         <td>{{ rec.first_name }}
                             {{ rec.last_name }}</td>
                         <td>{{ rec.email }}</td>

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="col-md-6 offset-md-3">
+        <br>
+        <h1>Add Record</h1>
+        <br>
+        {% if user.is_authenticated %}
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-primary">Update</button>
+                <a href="{% url 'home' %}" class="btn btn-secondary">Home</a>
+            </form>
+            </div>
+        {% endif %}
+{% endblock %}
